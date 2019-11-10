@@ -85,19 +85,117 @@ void display()
     
     setMaterial();
     /* hình 1 */
-    //glTranslated(1, 0, 0);
-    // hình 2
-    //glTranslated(0.5, 1, 0.9);
-    /* hình 3 */
-    //glTranslated(0, 0, 1);
-    //glRotated(90, 0, 1, 0);
-
-    glScaled(0.5, 0.5, 0.5);
-    glTranslated(0, 1, 0);
-    glRotated(60, 0, 1, 0);
-
-    
+    glTranslated(1, 0, 0);
     glutSolidTeapot(0.25);
+    
+    /* hình 2 */
+    // glTranslated(0.5, 1, 0.9);
+    // glutSolidTeapot(0.25);
+    
+    /* hình 3 */
+    // glTranslated(0, 0, 1);
+    // glRotated(90, 0, 1, 0);
+
+    /* hinh 4 */
+    // glScaled(0.5, 0.5, 0.5);
+    // glTranslated(0, 1, 0);
+    // glRotated(60, 0, 1, 0);
+
+    /* hinh 5 */
+//    glTranslated(1, 0, 0);
+//    glutSolidTeapot(0.25);
+//
+//    glTranslated(-1, 0, -1);
+//    glRotated(90, 0, 1 , 0);
+//    glutSolidTeapot(0.25);
+//
+//    glTranslated(-1, 0, -1);
+//    glRotated(90, 0, 1, 0);
+//    glutSolidTeapot(0.25);
+//
+//    glTranslated(-1, 0, -1);
+//    glRotated(90, 0, 1, 0);
+//    glutSolidTeapot(0.25);
+
+    /* hinh 6*/
+//    glutSolidTeapot(0.25);
+//    float scale = 0.3;
+//    for (int i = 0; i < 4; i++) {
+//        glTranslated(0, scale, 0);
+//        glScaled(0.8 , 0.8, 0.8);
+//        glutSolidTeapot(0.25);
+//        scale *= 1.25;
+//    }
+    
+    /* hình 7 */
+//    for (float y = 0; y < 1.5; y += 0.3) {
+//        for (float x = 0; x < 1.5 - y; x += 0.3) {
+//            glLoadIdentity();
+//            setCamera();
+//            glTranslated(x, y, 0);
+//            glutSolidCube(0.2);
+//            glLoadIdentity();
+//            setCamera();
+//            glTranslated(x, 0, y);
+//            glutSolidCube(0.2);
+//        }
+//    }
+    
+    /* hình 8 */
+//        glutSolidCube(0.2);
+//
+//        float distance = 0.08, scale = 0.8, y = 0.18;
+//        int i = 1;
+//
+//        while (i < 5) {
+//            glLoadIdentity();
+//            setCamera();
+//            if (i % 2 == 0)        glRotated(0, 1, 0, 0);
+//            else                glRotated(45, 1, 0, 0);
+//
+//            glTranslated(y, 0, 0);
+//            glScaled(scale, scale, scale);
+//            glutSolidCube(0.2);
+//
+//             y += distance * 1.8;
+//             distance *= 0.8;
+//             scale *= 0.8;
+//             i++;
+//        }
+//
+//        i = 1; distance = 0.08; scale = 0.8; y = 0.18;
+//        while (i < 5) {
+//            glLoadIdentity();
+//            setCamera();
+//            if (i % 2 == 0)        glRotated(0, 0, 1, 0);
+//            else                glRotated(45, 0, 1, 0);
+//
+//            glTranslated(0, y , 0);
+//            glScaled(scale, scale, scale);
+//            glutSolidCube(0.2);
+//
+//             y += distance * 1.8;
+//             distance *= 0.8;
+//             scale *= 0.8;
+//             i++;
+//        }
+//
+//            i = 1; distance = 0.08; scale = 0.8; y = 0.18;
+//        while (i < 5) {
+//            glLoadIdentity();
+//            setCamera();
+//            if (i % 2 == 0)        glRotated(0, 0, 0, 1);
+//            else                glRotated(45, 0, 0, 1);
+//
+//            glTranslated(0, 0 , y);
+//            glScaled(scale, scale, scale);
+//            glutSolidCube(0.2);
+//
+//             y += distance * 1.8;
+//             distance *= 0.8;
+//             scale *= 0.8;
+//             i++;
+//        }
 
     glFlush();
 }

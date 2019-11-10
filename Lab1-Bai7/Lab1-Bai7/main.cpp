@@ -1,10 +1,18 @@
-#include "GLUT/glut.h"
+//
+//  main.cpp
+//  Lab1-Bai7
+//
+//  Created by ManlyHumg on 11/10/19.
+//  Copyright © 2019 ManlyHumg. All rights reserved.
+//
+#include <math.h>
 #include "OpenGL/gl.h"
+#include "GLUT/glut.h"
 #include <math.h>
 
-#define     PI          3.1415926
+#define     PI        3.1415926
 #define    WIDTH        900
-#define     HEIGHT      600
+#define     HEIGHT        600
 
 float    fX[10], fY[10];
 
@@ -39,7 +47,8 @@ void myDisplay()
         }
     glEnd();
     glFlush();
-    }
+
+}
 
 Point2 lineIntersection(Point2 p1, Point2 p2, Point2 p3, Point2 p4)
 {
@@ -58,7 +67,7 @@ Point2 lineIntersection(Point2 p1, Point2 p2, Point2 p3, Point2 p4)
 
     return t;
 }
-    
+
 float calculateRadius(float centerX, float centerY) {
     float radius;
     Point2 p0, p8, p6, p2;
@@ -89,7 +98,8 @@ void calVertex()
 
     centerX = WIDTH/2.0;
     centerY = HEIGHT/2.0;
-    radius = 200;
+
+radius = 200;
 
     alpha = PI/2.0;
     inc   = 2.0*PI/5.0;
@@ -101,6 +111,7 @@ void calVertex()
         fX[i] = centerX + radius*cos(alpha);
         fY[i] = centerY + radius*sin(alpha);
     }
+    
     radius = calculateRadius(centerX, centerY);
     alpha += inc/2.0;
     for(int i = 9; i >= 1; i-= 2) {
@@ -110,8 +121,7 @@ void calVertex()
     }
 }
 
-int main(int argc, const char* argv[])
-{
+int main(int argc, const char * argv[]) {
     calVertex();
 
     glutInit(&argc, (char**)argv); //initialize the tool kit
@@ -119,10 +129,9 @@ int main(int argc, const char* argv[])
     glutInitWindowSize(WIDTH, HEIGHT); //set window size
     glutInitWindowPosition(0, 0); // set window position on screen
     glutCreateWindow("National Flag"); // open the screen window
-    
+
     glutDisplayFunc(myDisplay);
     myInit();
     glutMainLoop();
     return 0;
 }
-
